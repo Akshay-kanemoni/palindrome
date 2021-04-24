@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<script>
+			function Palindrome()
+			{
+				var rem, temp, final = 0;
+				var number = Number(document.getElementById("N").value);
+
+				temp = number;
+				while(number>0)
+				{
+					rem = number%10;
+					number = parseInt(number/10);
+					final = final*10+rem;
+                   
+				}
+				if(final==temp)
+				{
+					
+                    output = 'It is a  palindrome ';
+        document.getElementById('result').value=output;
+               
+				}
+				else
+				{
+					
+                    output = 'It is a NOT palindrome ';
+        document.getElementById('result').value=output;
+				}
+			}
+		</script>
+	</head>
+	<body style="background: url(./4....jpg);background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;color:whitesmoke;font-family: cursive;">
+		<br>
+        <DIV style="text-align: center; " >
+		<h1><strong> THE NUMBER IS PALINDROME OR NOT</strong></h1>
+	  <label>	Enter The Number :</label>
+      <input type="text" name="n" id = "N"/>
+		<br>
+		<br>
+		<button onClick="Palindrome()" style="text-align: center;">CHECK</button>
+        <BR>
+            <BR>
+        <div>
+            <label >Output</label>
+            <input id="result" type="text" enabled>
+    </div>
+</DIV>
+
+	</body>
+</html>
